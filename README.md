@@ -1,10 +1,16 @@
 # SVC: Singular Value Calibration for Model Merging
 
-<!-- Paper: https://arxiv.org/abs/XXXX.XXXXX -->
+[![Paper](https://img.shields.io/badge/Paper-arXiv%3A2602.05536-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.05536)
 
 English | [中文](#中文版本)
 
-## 📋 Project Overview (Introduction)
+## 🔗 Quick Links
+
+- [Paper (arXiv:2602.05536)](https://arxiv.org/abs/2602.05536)
+- [Quick Start](#-quick-start-5-minutes)
+- [Detailed Usage Guide](#-detailed-usage-guide)
+
+## 📋 Project Overview
 Model merging combines multiple fine-tuned models into a single model by *adding* their weight updates, providing a lightweight alternative to retraining.
 Existing methods primarily target resolving conflicts between task updates, leaving the failure mode of over-counting shared knowledge unaddressed.
 We show that when tasks share aligned spectral directions (*i.e.*, overlapping singular vectors), a simple linear combination repeatedly accumulates these directions, inflating the singular values and biasing the merged model toward shared subspaces.
@@ -13,6 +19,10 @@ Across vision and language benchmarks, SVC consistently improves strong merging 
 Furthermore, by modifying only the singular values, SVC improves the performance of Task Arithmetic by 13.0%.
 
 ![overview](main.png)
+
+## 📰 News
+
+- **2026-02-05**: We have submitted our paper to arXiv.
 
 ---
 
@@ -302,6 +312,9 @@ Contributions welcome! Please:
 
 **SVC** 是一个先进的模型融合框架，该项目基于 [Task Vectors](https://github.com/mlfoundations/task_vectors) 的研究，提出了 **奇异值校准（SVC）** 方法来实现多个微调模型的稳定高效融合。
 
+### 📰 新闻
+
+- **2026-02-05**：我们已将论文提交到 arXiv（[2602.05536](https://arxiv.org/abs/2602.05536)）。
 
 ### 🚀 5 分钟快速开始
 
