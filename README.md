@@ -1,22 +1,48 @@
 # SVC: Singular Value Calibration for Model Merging
 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Paper](https://img.shields.io/badge/Paper-arXiv%3A2602.05536-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.05536)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](#-license)
 
 English | [中文](#中文版本)
+
+Training-free and data-free singular value calibration for robust model merging across shared subspaces.
 
 ## 🔗 Quick Links
 
 - [Paper (arXiv:2602.05536)](https://arxiv.org/abs/2602.05536)
 - [Quick Start](#-quick-start-5-minutes)
 - [Detailed Usage Guide](#-detailed-usage-guide)
+- [Project Structure](#-project-structure)
+- [Technical Background](#-technical-background)
+
+## 🧭 Contents
+
+- [Project Overview](#-project-overview)
+- [News](#-news)
+- [Quick Start (5 Minutes)](#-quick-start-5-minutes)
+- [Detailed Usage Guide](#-detailed-usage-guide)
+- [Project Structure](#-project-structure)
+- [Technical Background](#-technical-background)
+- [Advanced Usage](#-advanced-usage)
+- [Troubleshooting](#-troubleshooting)
 
 ## 📋 Project Overview
+
 Model merging combines multiple fine-tuned models into a single model by *adding* their weight updates, providing a lightweight alternative to retraining.
 Existing methods primarily target resolving conflicts between task updates, leaving the failure mode of over-counting shared knowledge unaddressed.
 We show that when tasks share aligned spectral directions (*i.e.*, overlapping singular vectors), a simple linear combination repeatedly accumulates these directions, inflating the singular values and biasing the merged model toward shared subspaces.
 To mitigate this issue, we propose **Singular Value Calibration (SVC)**, a training-free and data-free post-processing method that quantifies subspace overlap and rescales inflated singular values to restore a balanced spectrum.
 Across vision and language benchmarks, SVC consistently improves strong merging baselines and achieves state-of-the-art performance.
 Furthermore, by modifying only the singular values, SVC improves the performance of Task Arithmetic by 13.0%.
+
+### Highlights
+
+- Training-free and data-free post-processing for model merging.
+- Targets spectral over-counting in shared singular directions.
+- Plug-and-play with common merging baselines (TA, TIES, STAR, TSV-M, Iso-*).
+- Strong empirical gains across vision and language benchmarks.
 
 ![overview](main.png)
 
@@ -307,6 +333,14 @@ Contributions welcome! Please:
 ---
 
 ## 中文版本
+
+一句话简介：SVC 是一种无需训练、无需数据的奇异值校准方法，用于提升多任务模型融合的稳定性与泛化性能。
+
+### 🔗 快速导航
+
+- [论文（arXiv:2602.05536）](https://arxiv.org/abs/2602.05536)
+- [5 分钟快速开始](#-5-分钟快速开始)
+- [使用指南](#-使用指南)
 
 ### 项目概述
 
