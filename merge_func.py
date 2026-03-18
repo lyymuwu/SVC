@@ -421,13 +421,14 @@ def coef_cal_multi_ranks(Wts, Wm, Um, Sm, Vm, k, row_space=False, alpha=1.0, tar
 
     if target == -1:
         # Original behavior over all tasks
-        pos_all = (s > 0).all(dim=1)        # [n_ranks]
-        mean_s = s.mean(dim=1)              # [n_ranks]
-        eta_vec = torch.where(
-            pos_all,
-            torch.maximum(mean_s, alpha_t),
-            torch.ones_like(mean_s)
-        )
+        # pos_all = (s > 0).all(dim=1)        # [n_ranks]
+        # mean_s = s.mean(dim=1)              # [n_ranks]
+        # eta_vec = torch.where(
+        #     pos_all,
+        #     torch.maximum(mean_s, alpha_t),
+        #     torch.ones_like(mean_s)
+        # )
+        eta_vec = torch.maximum(s, alpha_t).mean(dim=1)  
     else:
         # Only the target task (now at index 0 after slicing)
         s_t = s[:, 0]                       # [n_ranks]
