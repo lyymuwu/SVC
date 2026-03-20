@@ -9,6 +9,12 @@ English | [中文](#中文版本)
 
 Training-free and data-free singular value calibration for robust model merging across shared subspaces.
 
+## 📰 News
+
+- 💥**2026-02-05**: We have submitted our paper to arXiv.
+- 💥**2026-03-20**: We appreciate [Anke Tang](https://github.com/tanganke) for including our work in [fusion_bench](https://github.com/tanganke/fusion_bench)!
+---
+
 ## 🔗 Quick Links
 
 - [Paper (arXiv:2602.05536)](https://arxiv.org/abs/2602.05536)
@@ -46,11 +52,6 @@ Furthermore, by modifying only the singular values, SVC improves the performance
 
 ![overview](main.png)
 
-## 📰 News
-
-- **2026-02-05**: We have submitted our paper to arXiv.
-
----
 
 ## 🚀 Quick Start (5 Minutes)
 
@@ -304,18 +305,18 @@ state = ckpt.state_dict() if hasattr(ckpt, 'state_dict') else ckpt
 
 ---
 
-<!-- ## 📝 Citation
+## 📝 Citation
 
 If this work helps your research, please cite:
 
 ```bibtex
-@article{SVC2024,
-  title={SVC: Synergistic Vision-Language Model Merging with Support Vector Calibration},
-  author={Your Name and Colleagues},
-  journal={arXiv preprint},
+@article{SVC2026,
+  title={When Shared Knowledge Hurts: Spectral Over-Accumulation in Model Merging},
+  author={Li, Yayuan and Peng, Ze and Zhang, Jian and Guo, Jintao and Duan, Yue and Shi, Yinghuan},
+  journal={arXiv preprint arXiv:2602.05536},
   year={2026}
 }
-``` -->
+``` 
 
 ---
 
@@ -346,9 +347,6 @@ Contributions welcome! Please:
 
 **SVC** 是一个先进的模型融合框架，该项目基于 [Task Vectors](https://github.com/mlfoundations/task_vectors) 的研究，提出了 **奇异值校准（SVC）** 方法来实现多个微调模型的稳定高效融合。
 
-### 📰 新闻
-
-- **2026-02-05**：我们已将论文提交到 arXiv（[2602.05536](https://arxiv.org/abs/2602.05536)）。
 
 ### 🚀 5 分钟快速开始
 
