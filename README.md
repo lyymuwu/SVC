@@ -11,8 +11,9 @@ Training-free and data-free singular value calibration for robust model merging 
 
 ## 📰 News
 
-- 💥**2026-02-05**: We have submitted our paper to arXiv.
+- 💥**2026-05-01**: Our paper is accepted by ICML'26. See you all in Seoul, Korea!
 - 💥**2026-03-20**: We appreciate [Anke Tang](https://github.com/tanganke) for including our work in [fusion_bench](https://github.com/tanganke/fusion_bench)!
+- 💥**2026-02-05**: We have submitted our paper to arXiv.
 ---
 
 ## 🔗 Quick Links
